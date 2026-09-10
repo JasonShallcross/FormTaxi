@@ -51,6 +51,11 @@
   }
 
   function redactorEditable(textarea) {
+    const adjacentContainer = textarea.nextElementSibling?.matches?.('.rx-container') ? textarea.nextElementSibling : null;
+    const container = adjacentContainer || textarea.parentElement?.querySelector('.rx-container');
+    const currentEditor = container?.querySelector('.rx-editor[contenteditable="true"]');
+    if (currentEditor) return currentEditor;
+
     const adjacentBox = textarea.nextElementSibling?.matches?.('.redactor-box') ? textarea.nextElementSibling : null;
     const box = textarea.closest('.redactor-box') || adjacentBox || textarea.parentElement?.querySelector('.redactor-box');
     return box?.querySelector(REDACTOR_EDITABLE_SELECTOR) || null;

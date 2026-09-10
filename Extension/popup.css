@@ -7,7 +7,7 @@
 
 * { box-sizing: border-box; }
 body { width: 340px; margin: 0; }
-main { padding: 18px; }
+main { position: relative; padding: 18px; }
 header { display: flex; justify-content: center; margin-bottom: 17px; }
 .logo { display: block; width: 112px; height: auto; }
 .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
@@ -46,4 +46,5 @@ header { display: flex; justify-content: center; margin-bottom: 17px; }
 .clear { padding: 4px; border: 0; cursor: pointer; color: #69726c; background: transparent; font: 600 11px/1 inherit; }
 .status { min-height: 16px; margin: 11px 1px 0; color: #1e5b3b; font-size: 11px; font-weight: 600; }
 .status.error { color: #a43b2a; }
+.version { position: absolute; top: 10px; right: 10px; margin: 0; color: #9aa09b; font-size: 9px; line-height: 1; }
 @media (prefers-reduced-motion: reduce) { .button { transition: none; } }

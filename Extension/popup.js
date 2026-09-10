@@ -15,6 +15,9 @@ const clipboard = document.querySelector('#clipboard');
 const clipboardTitle = document.querySelector('#clipboard-title');
 const clipboardDetail = document.querySelector('#clipboard-detail');
 const status = document.querySelector('#status');
+const version = document.querySelector('#version');
+
+version.textContent = `v${chrome.runtime.getManifest().version}`;
 
 function setStatus(message, error = false) {
   status.textContent = message;

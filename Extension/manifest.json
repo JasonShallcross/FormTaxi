@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FormTaxi",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Pick up form values in one tab and drop them off in another.",
   "minimum_chrome_version": "102",
   "permissions": [
